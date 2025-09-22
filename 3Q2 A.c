@@ -1,17 +1,22 @@
    #include <stdio.h>
 
     int main() {
-    int a ,b ,c ;
-    printf("enter 3 integer : ");
-    scanf(" %d %d %d", &a,&b,&c);
-    if (a>=b && a>=c) {printf("greatest integer is %d/n",a);
-	}
-    else if(b>=c && b>=a){ printf("greatest integer is %d\n",b);
-	}
-    else {
-	printf("greatest integer is %d\n",c);
-}
-	
-	return 0;
+    int a, b, c, greatest;
 
-    }
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    greatest = (a > b) ? 
+    ((a > c) ? a : c) 
+    : 
+    ((b > c) ? b : c);
+
+    printf("Greatest integer is %d\n", greatest);
+
+    return 0;
+}
+
+	
+	
+
+    
